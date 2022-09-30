@@ -1,1 +1,14 @@
-<p>products works!</p>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-lg-4" *ngFor="let fd of carData">
+            <div class="carBox mt-3 mb-3">
+            <img src="{{fd.carImg}}">
+            <h1>{{fd.carName}}</h1>
+            <p>{{fd.carDetails}}</p>
+            <p>{{fd.carPrice | currency:'INR'}}</p>
+            <br/>
+            <a class="buybtn" [routerLink]="['/product',fd.id]"> Buy Now &nbsp;<i class="bi bi-bag"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

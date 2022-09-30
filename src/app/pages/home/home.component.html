@@ -34,13 +34,16 @@
 
 <!-- carbox -->
 <div class="container mt-4 mb-4">
+    <h1 class="text-center">Customers <span class="highlight">Favourities Cars</span></h1>
     <div class="row">
-        <div class="col-lg-3 mt-3" *ngFor="let fd of carData">
-            <div class="carbox">
-                <img src="{{fd.carImg}}"/>
+        <div class="col-lg-3 mt-3" *ngFor="let fd of carData;index as i">
+            {{fd.carImg}}
+            <div class="carbox" *ngIf="i<=3">
+                <img [src]="fd.carImg"/>
                 <h1>{{fd.carName}}</h1>
-                <p>{{fd.carPrice}}</p>
+                <p>{{fd.carPrice | currency:'INR'}}</p>
             </div>
         </div>
     </div>
+    <a routerLink="products" class="viewmorebtn"> view more <i class="bi bi-caret-right"></i></a>
 </div>
