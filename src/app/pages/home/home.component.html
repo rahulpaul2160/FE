@@ -39,7 +39,7 @@
         <div class="col-lg-3 mt-3" *ngFor="let fd of carData;index as i">
             {{fd.carImg}}
             <div class="carbox" *ngIf="i<=3">
-                <img [src]="fd.carImg"/>
+                <img src="{{fd.carImg}}"/>
                 <h1>{{fd.carName}}</h1>
                 <p>{{fd.carPrice | currency:'INR'}}</p>
             </div>
