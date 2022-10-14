@@ -37,7 +37,6 @@
     <h1 class="text-center">Customers <span class="highlight">Favourities Cars</span></h1>
     <div class="row">
         <div class="col-lg-3 mt-3" *ngFor="let fd of carData;index as i">
-            {{fd.carImg}}
             <div class="carbox" *ngIf="i<=3">
                 <img src="{{fd.carImg}}"/>
                 <h1>{{fd.carName}}</h1>
