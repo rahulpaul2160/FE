@@ -9,7 +9,7 @@
     <h1 class="text-center">How To Choose <span style class="highlight"> Your Car</span></h1>
 <div class="row mt-5 "> 
         <!-- one -->
-    <div class="col-log-4 mt-2">
+    <div class="col-log-100 mt-2">
         <div class="stepBox">
             <h1>1</h1>
             <p>Select Cars</p>
@@ -37,7 +37,6 @@
     <h1 class="text-center">Customers <span class="highlight">Favourities Cars</span></h1>
     <div class="row">
         <div class="col-lg-3 mt-3" *ngFor="let fd of carData;index as i">
-            {{fd.carImg}}
             <div class="carbox" *ngIf="i<=3">
                 <img src="{{fd.carImg}}"/>
                 <h1>{{fd.carName}}</h1>
